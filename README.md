@@ -4,7 +4,7 @@ Must rename function under address 6AE780 (this is for Steam version of a game) 
 
 Tested on Ghidra 11.2
 
-Script is searching for every Debug_Info call, then fetches it's sixth parameter and extracts then parses string from it, and then renames function that contain that Debug_Info call to the extracted and parsed info from string (sixth parameter).
+Script is searching for every Debug_Info call, then fetches it's sixth parameter and extracts then parses string from it, and then renames function that contain that Debug_Info call to the extracted and parsed info from that string.
 
 Functions will have much more friendly name (previously FUN_ named functions):
 
