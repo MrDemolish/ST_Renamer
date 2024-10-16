@@ -13,5 +13,5 @@ Functions will have much more friendly name (previously FUN_ named functions):
 
 Instructions:
 1. In Ghidra go to Window->Script Manager
-2. Create New Script (Jython), name it as You want
+2. Create New Script (Jython), name it as You want, paste the ST_Renamer.py file code
 3. Execute it
