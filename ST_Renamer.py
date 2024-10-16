@@ -19,11 +19,15 @@ def sanitize_name(name):
             name = ''.join(chars)
     except ValueError:
         pass  # If conversion fails, leave the name unchanged
-    # Then sanitize the name
-    sanitized = re.sub(r'[^a-zA-Z0-9_]', '_', name)
+    # Truncate at first comma, space, or opening parenthesis
+    name = re.split(r'[,\s(]', name)[0]
+    # Then sanitize the name, allowing colons
+    sanitized = re.sub(r'[^a-zA-Z0-9_:]', '_', name)
     if sanitized and sanitized[0].isdigit():
         sanitized = '_' + sanitized
     return sanitized
+
+
 
 def get_debug_info_function():
     funcs = getGlobalFunctions("Debug_Info")
